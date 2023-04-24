@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<math.h>
+int power(int,int);
+int add(int,int);
+int sub(int,int);
+int mul(int,int);
+int div(int,int);
+int main(){
+	int x,n,p,a,s,m,d,choice;
+	printf("enter x value:");
+	scanf("%d",&x);
+	printf("enter n value:");
+	scanf("%d",&n);
+	printf("enter choice:");
+	scanf("%d",&choice);
+	p=power(x,n);
+	a=add(x,n);
+	s=sub(x,n);
+	m=mul(x,n);
+	d=div(x,n);
+	switch(choice){
+		case 1:printf("the power is %d",p);
+		break;
+		case 2:printf("the addition is %d",a);
+		break;
+		case 3:printf("the diff is %d",s);
+		break;
+		case 4:printf("the product is %d",m);
+		break;
+		case 5:printf("the quotient is %d",d);
+		break;
+		default:printf("invalid");
+	}
+}
+int power(int x,int n){
+	int c;
+	c=pow(x,n);
+	return c;
+}
+int add(int x,int n){
+	return x+n;
+}
+int sub(int x,int n){
+	return x-n;
+}
+int mul(int x,int n){
+	return x*n;
+}
+int div(int x,int n){
+	return x/n;
+}
