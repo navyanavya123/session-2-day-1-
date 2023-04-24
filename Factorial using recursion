@@ -1,0 +1,16 @@
+#include<stdio.h>
+int nos(int n);
+int main() {
+    int n;
+    printf("Enter a num: ");
+    scanf("%d",&n);
+    printf("Factorial of %d = %d", n);
+    return 0;
+}
+
+int nos(int n) {
+    if (n>=1)
+        return n*nos(n-1);
+    else
+        return 1;
+}
